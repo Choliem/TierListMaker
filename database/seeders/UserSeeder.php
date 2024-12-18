@@ -20,11 +20,12 @@ class UserSeeder extends Seeder
             'username' => 'udindesu',
             'email' => 'choyim@gmail.com',
             'email_verified_at' => now(),
+            'is_admin' => true,
             'password' => Hash::make('password'),
             'remember_token' => Str::random(10)
         ]);
-        
-        
+
+
         User::factory(5)->create();
     }
 }

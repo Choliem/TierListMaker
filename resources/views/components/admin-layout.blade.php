@@ -9,18 +9,18 @@
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
-    <title>{{ $title ?? 'User Dashboard' }}</title>
+    <title>{{ $title ?? 'Admin Dashboard' }}</title>
 </head>
 
 <body class="h-full">
     <div class="min-h-full">
 
-        <x-navbar></x-navbar> <!-- Default Navbar for Users -->
+        <x-navbar></x-navbar> <!-- Admin Navbar -->
         <x-header>{{ $title }}</x-header>
 
         <main>
             <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-                {{ $slot }} <!-- Content for User Dashboard -->
+                {{ $slot }} <!-- Content for Admin Dashboard -->
             </div>
         </main>
 
