@@ -1,5 +1,5 @@
 
-#If Halaman User
+{{-- If Halaman User --}}
 
 <x-layout>
     <x-slot:title>{{ $title }}</x-slot:title>
@@ -23,4 +23,4 @@
 
 
 
-#If Halaman Admin
+{{-- If Halaman Admin --}}
