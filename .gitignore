@@ -19,5 +19,5 @@
 # /.fleet
 # /.idea
 # /.nova
-/.vscode
-/.zed
+# /.vscode
+# /.zed
