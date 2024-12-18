@@ -1,3 +1,5 @@
+#If Halaman User
+
 <x-layout>
     <x-slot:title>{{ $title }}</x-slot:title>
 
@@ -20,3 +22,5 @@
     @endforeach
 
 </x-layout>
+
+# If Halaman Admin
