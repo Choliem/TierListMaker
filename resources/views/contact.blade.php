@@ -1,6 +1,13 @@
 {{-- anggap halaman inni setting untuk log out dan hapus account --}}
 
-<x-layout>
-    <x-slot:title>{{ $title }}</x-slot:title>
+@if(auth()->user() && auth()->user()->is_admin)
+    @extends('components.admin-layout')
+@else
+    @extends('components.layout')
+@endif
+
+@section('content')
+    <x-slot:title>{{ $title ?? 'Contact Us' }}</x-slot:title>
     <h3 class="text-xl">Contact Kami</h3>
-</x-layout>
+    <!-- Add additional content for the Contact page here -->
+@endsection

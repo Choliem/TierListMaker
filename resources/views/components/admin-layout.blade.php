@@ -14,16 +14,15 @@
 
 <body class="h-full">
     <div class="min-h-full">
+        <!-- Admin Navbar -->
+        <x-navbar></x-navbar>
 
-        <x-navbar></x-navbar> <!-- Admin Navbar -->
         <x-header>{{ $title }}</x-header>
 
         <main>
             <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-                {{ $slot }} <!-- Content for Admin Dashboard -->
-            </div>
+                @yield('content')
         </main>
-
     </div>
 </body>
 

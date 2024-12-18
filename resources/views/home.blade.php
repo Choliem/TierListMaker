@@ -1,4 +1,10 @@
-<x-layout>
-    <x-slot:title>{{ $title }}</x-slot:title>
-    <h3 class="text-xl">Ini adalah halaman Home Page</h3>
-</x-layout>
+@if(auth()->user() && auth()->user()->is_admin)
+    @extends('components.admin-layout')
+@else
+    @extends('components.layout')
+@endif
+
+@section('content')
+    <h1>Welcome to the Home Page</h1>
+    <p>This is the content of the homepage.</p>
+@endsection
