@@ -39,7 +39,7 @@ class CategorySeeder extends Seeder
             'name' => 'UI UX',
             'slug' => 'ui-ux',
         ]);
-        
+
         Category::create([
             'name' => 'Web Programing',
             'slug' => 'web-programing',
