@@ -22,6 +22,7 @@ return new class extends Migration
             );
             $table->string('slug')->unique();
             $table->text('body');
+            $table->string('image_url')->nullable(); // column to store image URL
             $table->timestamps();
         });
     }
@@ -31,6 +32,12 @@ return new class extends Migration
      */
     public function down(): void
     {
+
+        Schema::table('posts', function (Blueprint $table) {
+            $table->dropColumn('image_url', 'likes_count');
+        });
+
         Schema::dropIfExists('posts');
+
     }
 };
