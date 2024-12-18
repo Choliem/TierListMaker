@@ -5,12 +5,11 @@ use App\Models\User;
 use App\Models\Category;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
 
 
-Route::get('/', function () {
-    return view('home', ['title' => 'Home Page']);
-})->middleware('auth')->name('home');
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::middleware('auth')->get('/profile', [UserController::class, 'showProfile'])->name('profile');
 Route::middleware('auth')->get('/profile', [UserController::class, 'showProfile'])->name('profile');
@@ -51,4 +50,4 @@ Route::post('/register', [AuthController::class, 'register'])->name('register');
 Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login.form');
 Route::post('/login', [AuthController::class, 'login'])->name('login');
 Route::get('/dashboard', [AuthController::class, 'dashboard'])->name('dashboard')->middleware('auth');
-Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+Route::post('/', [AuthController::class, 'logout'])->name('logout');

@@ -55,6 +55,11 @@
                         </div>
                     </div>
                     @endauth
+
+                    @guest
+                    <!-- If the user is a guest (not logged in), show the login button -->
+                    <x-nav-link href="{{ route('login.form') }}" :active="request()->is('login')">Login</x-nav-link>
+                    @endguest
                 </div>
             </div>
             <div class="-mr-2 flex md:hidden">
