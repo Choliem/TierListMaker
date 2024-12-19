@@ -1,11 +1,7 @@
-
-{{-- If Halaman User --}}
-
-{{-- If Halaman User --}}
 @if(auth()->user() && !auth()->user()->is_admin)
     @extends('components.layout')
 @else
-    {{-- If Halaman Admin --}}
+
     @extends('components.admin-layout')
 @endif
 
@@ -27,7 +23,3 @@
         <a href="/posts" class="font-medium text-blue-500 hover:underline">Back To Posts &laquo;</a>
     </article>
 @endsection
-
-
-
-{{-- If Halaman Admin --}}
