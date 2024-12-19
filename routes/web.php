@@ -6,6 +6,7 @@ use App\Models\Category;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\DashboardController;
 
@@ -44,6 +45,9 @@ Route::get('/contact', function () {
     return view('contact', ['title' => 'Contact Us']);
 });
 
+
+Route::post('/posts/{post}/update-image', [PostController::class, 'updateImage'])->name('posts.updateImage');
+Route::delete('/posts/{post}/delete-image', [PostController::class, 'deleteImage'])->name('posts.deleteImage');
 
 
 Route::get('/register', [AuthController::class, 'showRegisterForm'])->name('register.form');

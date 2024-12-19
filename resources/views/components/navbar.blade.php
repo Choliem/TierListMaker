@@ -59,7 +59,7 @@
                             class="relative flex max-w-xs items-center rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                             <span class="sr-only">Open user menu</span>
                             <img class="size-8 rounded-full"
-                                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                                src="https://cdn.discordapp.com/attachments/1272806920884981812/1319073919843438602/deafultprofile.jpg?ex=6764a2d1&is=67635151&hm=54c1e287837a093cc0e458cd88a65e3a8632db2822d8c9b2ff9e5de082d29d0c&"
                                 alt="">
                         </button>
                         <div x-show="isOpen" x-transition:enter="transition ease-out duration-100 transform"
