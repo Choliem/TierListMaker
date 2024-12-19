@@ -2,7 +2,7 @@
 
 @section('content')
     <x-slot:title>{{ $title ?? 'Blog Posts' }}</x-slot:title>
-
+    {{ $posts->links() }}
     @foreach ($posts as $post)
         <article class="py-8 max-w-screen-md border-b border-gray-300">
             <a href="/posts/{{ $post['slug'] }}" class="hover:underline">

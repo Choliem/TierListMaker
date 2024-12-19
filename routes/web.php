@@ -19,8 +19,8 @@ Route::middleware('auth')->post('/profile/update', [UserController::class, 'upda
 
 Route::get('/posts', function () {
     // $posts = Post::with(['author', 'category'])->latest()->get();
-    $posts = Post::latest()->get();
-    return view('posts', ['title' => 'Blog Page', 'posts' => $posts]);
+    $posts = Post::latest()->paginate(10);
+    return view('posts', ['title' => 'Posts Page', 'posts' => $posts]);
 });
 
 Route::get('/posts/{post:slug}', function(Post $post){
