@@ -1,10 +1,4 @@
-{{-- If Halaman User --}}
-
-@if(auth()->user() && auth()->user()->is_admin)
-    @extends('components.admin-layout')
-@else
-    @extends('components.layout')
-@endif
+@extends('components.layout')
 
 @section('content')
     <x-slot:title>{{ $title ?? 'Blog Posts' }}</x-slot:title>
@@ -23,11 +17,11 @@
                     class="hover:underline text-base text-gray-500">{{ $post->category->name }}</a> |
                 {{ $post->created_at->diffForHumans() }}
             </div>
+            @if ($post['image'])
+                <img src="{{ $post['image'] }}" alt="{{ $post['title'] }}" class="my-4 w-full h-auto rounded-md">
+            @endif
             <p class="my-4 font-light">{{ Str::limit($post['body'], 150) }}</p>
             <a href="/posts/{{ $post['slug'] }}" class="font-medium text-blue-500 hover:underline">Read More &raquo;</a>
         </article>
     @endforeach
 @endsection
-
-
-{{-- If Halaman Admin --}}

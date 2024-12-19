@@ -1,14 +1,12 @@
-@if(auth()->user() && !auth()->user()->is_admin)
-    @extends('components.layout')
-@else
-
-    @extends('components.admin-layout')
-@endif
+@extends('components.layout')
 
 @section('content')
     <x-slot:title>{{ $title ?? 'Post Details' }}</x-slot:title>
 
     <article class="py-8 max-w-screen-md">
+        @if ($post['image'])
+            <img src="{{ $post['image'] }}" alt="{{ $post['title'] }}" class="mb-4 w-full rounded shadow-md">
+        @endif
         <h2 class="mb-1 text-3xl tracking-tight font-bold text-gray-900">{{ $post['title'] }}</h2>
         <div>
             By

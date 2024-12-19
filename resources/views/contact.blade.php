@@ -1,10 +1,7 @@
 {{-- anggap halaman inni setting untuk log out dan hapus account --}}
 
-@if(auth()->user() && auth()->user()->is_admin)
-    @extends('components.admin-layout')
-@else
-    @extends('components.layout')
-@endif
+@extends('components.layout')
+
 
 @section('content')
     <x-slot:title>{{ $title ?? 'Contact Us' }}</x-slot:title>

@@ -1,5 +1,6 @@
-<x-layout>
-    <x-slot:title>{{ $title }}</x-slot:title>
+@extends('components.layout')
+
+@section('content')
     <h3 class="text-xl">About Me</h3>
     <p>Nama: {{ $nama }}</p>
-</x-layout>
+@endsection
